@@ -1,0 +1,64 @@
+.detailsContainer {
+  box-shadow: 0 0 2px black;
+  height: 60vh;
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  width: 75%;
+  max-width: 1000px;
+  min-height: 500px;
+
+  display: grid;
+
+  grid-template-columns: 300px auto;
+  grid-template-rows: auto 200px;
+  grid-template-areas:
+    "IMG TXT"
+    "IMG BTN";
+
+  .containerImg {
+    grid-area: IMG;
+    align-self: center;
+    border-right: 1px solid var(--gray-200);
+    height: 80%;
+    display: flex;
+    flex: 1;
+  }
+
+  img {
+    margin: auto auto;
+    height: 20rem;
+  }
+
+  .containerInfos {
+    grid-area: TXT;
+  }
+
+  .containerComprar {
+    grid-area: BTN;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 860px) {
+  .detailsContainer {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 2px black;
+    max-width: 80%;
+
+    height: 100%;
+  }
+
+  .containerImg {
+    margin-top: 1rem;
+    border: none !important;
+    margin-bottom: 1rem;
+  }
+  .containerInfos {
+    border-top: 1px solid var(--gray-200);
+  }
+}
