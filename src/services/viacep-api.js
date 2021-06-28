@@ -1,5 +1,5 @@
-import axios from 'axios'
+import axios from "axios";
 
-const APIVIACEP =  axios.create({baseURL:`http://viacep.com.br/ws`})
+const APIVIACEP = axios.create({ baseURL: `https://viacep.com.br/ws` });
 
 export default APIVIACEP;
